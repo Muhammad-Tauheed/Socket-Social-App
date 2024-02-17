@@ -1,20 +1,30 @@
 const mongoose = require('mongoose');
-const smsSchema = new mongoose.Schema({
+const { Schema } = mongoose;
+
+const smsSchema = new Schema({
     message: {
         type: Object
     },
     file_upload: {
-        type:Object
+        type: Object
+    },
+    sender_id: {
+        type: Object,
+        required: true
+    },
+    receiver_id: {
+        type: Object,
+        required: true
     },
     unread: {
-        type:Object,
-    },
-
-},
-{
+        type: Object,
+    }
+}, {
     timestamps: {}
-})
+});
+
 module.exports = mongoose.model('Sms', smsSchema);
+
  
 
 
