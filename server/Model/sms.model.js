@@ -9,7 +9,7 @@ const smsSchema = new mongoose.Schema({
     unread: {
         type:Object,
     },
-    name:{}
+
 },
 {
     timestamps: {}
